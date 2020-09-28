@@ -6,6 +6,5 @@
     "**/environments/": true,
     ".vscode/": true,
     "**/*.component.spec.ts": true,
-    "**/*.component.scss": true,
   },
 }
