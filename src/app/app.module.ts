@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 // import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MountainComponent } from './mountain/mountain.component';
+import { AreaComponent } from './area/area.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MountainComponent
+    MountainComponent,
+    AreaComponent,
   ],
   imports: [
     BrowserModule,
