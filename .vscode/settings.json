@@ -5,6 +5,6 @@
     "**/assets/": true,
     "**/environments/": true,
     ".vscode/": true,
-    "**/*.component.spec.ts": true,
+    "**/*.*.spec.ts": true,
   },
 }
