@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MountainComponent } from './mountain/mountain.component';
 import { AreaComponent } from './area/area.component';
 import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MountainComponent,
     AreaComponent,
-    MountainDetailComponent
+    MountainDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
