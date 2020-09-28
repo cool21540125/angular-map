@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-// import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MountainComponent } from './mountain/mountain.component';
 import { AreaComponent } from './area/area.component';
@@ -18,7 +18,7 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   imports: [
     BrowserModule,
-    // AppRoutingModule,
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],
