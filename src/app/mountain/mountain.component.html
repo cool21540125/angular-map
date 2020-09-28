@@ -1,10 +1,8 @@
 <h2> 台灣山岳 </h2>
 <ul class="mountains">
-  <li *ngFor="let mt of mountains"
-    [class.selected]="mt === selectedMt"
-    (click)="onSelect(mt)">
-    <span class="badge">{{mt.id}}</span> {{mt.name}}
+  <li *ngFor="let mt of mountains">
+    <a routerLink="/detail/{{mt.id}}">
+      <span class="badge">{{mt.id}}</span> {{mt.name}}
+    </a>
   </li>
 </ul>
-
-<app-mountain-detail [mt]="selectedMt"></app-mountain-detail>

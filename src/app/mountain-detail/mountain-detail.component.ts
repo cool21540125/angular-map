@@ -1,4 +1,7 @@
+import { MountainService } from './../mountain.service';
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Mountain } from '../mountain';
 
 @Component({
@@ -10,9 +13,24 @@ export class MountainDetailComponent implements OnInit {
 
   @Input() mt: Mountain;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private mountainService: MountainService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
   }
 
+  getMountain(): void {
+    // route.snapshot 是一個路由資訊的靜態快照，抓取自元件剛剛建立完畢之後。
+    // paramMap 是一個從 URL 中提取的路由引數值的字典。 "id" 對應的值就是要獲取的英雄的 id。
+    const id = this.route.snapshot.paramMap.get('id');
+    this.mountainService.getMountain(id)
+        .subscribe(mt => this.mt = mt);
+  }
+
+  goBack(): void {
+    this.location.back();
+  }
 }

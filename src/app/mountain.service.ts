@@ -16,4 +16,10 @@ export class MountainService {
     this.messageService.add('MountainService: fetched mountains');
     return of(MOUNTAINS);
   }
+
+  getMountain(id: string): Observable<Mountain> {
+    // TODO: send the message _after_ fetching the mountain
+    this.messageService.add(`MountainService: fetched mountain id=${id}`);
+    return of(MOUNTAINS.find(mt => mt.id === id));
+  }
 }

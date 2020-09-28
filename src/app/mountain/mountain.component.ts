@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Mountain } from '../mountain';
 import { MountainService } from '../mountain.service';
-import { MessageService } from '../message.service';
 
 @Component({
   selector: 'app-mountain',
@@ -9,19 +8,12 @@ import { MessageService } from '../message.service';
   styleUrls: ['./mountain.component.scss']
 })
 export class MountainComponent implements OnInit {
-
-  selectedMt: Mountain;
   mountains: Mountain[];
 
-  constructor(private mtService: MountainService, private messageService: MessageService) { }
+  constructor(private mtService: MountainService) { }
 
   ngOnInit(): void {
     this.getMountains();
-  }
-
-  onSelect(mt: Mountain): void {
-    this.selectedMt = mt;
-    this.messageService.add(`MountainsComponent: Selected mountain id=${mt.id}`)
   }
 
   getMountains(): void {

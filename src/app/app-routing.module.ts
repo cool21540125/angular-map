@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MountainComponent } from './mountain/mountain.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'mountain', component: MountainComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'mountain', component: MountainComponent },
+  { path: 'detail/:id', component: MountainDetailComponent },
 ];
 
 @NgModule({
