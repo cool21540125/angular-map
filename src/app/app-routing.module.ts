@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MountainComponent } from './mountain/mountain.component';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: 'mountain', component: MountainComponent }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'mountain', component: MountainComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

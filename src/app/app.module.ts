@@ -7,6 +7,7 @@ import { MountainComponent } from './mountain/mountain.component';
 import { AreaComponent } from './area/area.component';
 import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MessagesComponent } from './messages/messages.component';
     MountainComponent,
     AreaComponent,
     MountainDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
