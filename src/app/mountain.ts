@@ -1,4 +1,4 @@
 export interface Mountain {
-  id: string;
+  pid: string;
   name: string;
 }
