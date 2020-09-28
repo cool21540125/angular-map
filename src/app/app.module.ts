@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MountainComponent } from './mountain/mountain.component';
 import { AreaComponent } from './area/area.component';
+import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MountainComponent,
     AreaComponent,
+    MountainDetailComponent
   ],
   imports: [
     BrowserModule,

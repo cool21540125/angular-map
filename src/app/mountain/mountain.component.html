@@ -7,14 +7,4 @@
   </li>
 </ul>
 
-<div *ngIf="selectedMt">
-
-  <h2>{{ selectedMt.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{selectedMt.id}}</div>
-  <div>
-    <label for="">name:
-      <input [(ngModel)]="selectedMt.name" placeholder="name" />
-    </label>
-  </div>
-
-</div>
+<app-mountain-detail [mt]="selectedMt"></app-mountain-detail>
