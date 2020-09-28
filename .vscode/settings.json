@@ -1,0 +1,11 @@
+{
+  "files.exclude": {
+    "node_modules/": true,
+    "e2e/": true,
+    "**/assets/": true,
+    "**/environments/": true,
+    ".vscode/": true,
+    "**/*.component.spec.ts": true,
+    "**/*.component.scss": true,
+  },
+}
