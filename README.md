@@ -1,3 +1,8 @@
+
+```bash
+ng serve --proxy-config proxy.conf.json
+```
+
 # AngularMap
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
