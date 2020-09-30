@@ -1,12 +1,13 @@
+
 export interface Weather {
   pid: string;
-  data: Data;
+  data: WeatherData;
 }
 
-export interface Data {
-  time_duration: string;
-  temperature: number;
-  body_temperature: number;
-  humidity: number;
-  chance_of_rain: number;
+export interface WeatherData {
+  time_duration: string[];
+  temperature: number[];
+  body_temperature: number[];
+  humidity: number[];
+  chance_of_rain: number[];
 }

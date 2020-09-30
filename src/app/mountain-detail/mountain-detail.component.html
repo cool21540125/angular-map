@@ -1,20 +1,23 @@
 <div *ngIf="weather">
 
   <h2>Details</h2>
-  <ul class="mountains">
-    <li *ngFor="let elem of weather.data">
-      {{elem.time_duration}}:
-      溫度: {{elem.temperature}} / 體感: {{elem.body_temperature}} /
-      濕: {{elem.humidity}} / 降雨%: {{elem.chance_of_rain}}
-    </li>
-  </ul>
+  <div class="list">
+    <ul class="mountains">
+      <li *ngFor="let elem of weather.data">
+        {{elem.time_duration}}:
+        溫度: {{elem.temperature}} / 體感: {{elem.body_temperature}} /
+        濕: {{elem.humidity}} / 降雨%: {{elem.chance_of_rain}}
+      </li>
+    </ul>
+  </div>
 
+  OK
 </div>
 
-<div *ngIf="mt">
-  <h2>Mountain: {{mt.name}} </h2>
-  <p>pid: {{mt.pid}} </p>
-</div>
+<mat-table [dataSource]="weather">
+</mat-table>
+
+
 
 <hr />
 <button (click)="goBack()">Back</button>

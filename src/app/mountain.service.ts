@@ -59,11 +59,15 @@ export class MountainService {
     // this.messageService.add(`MountainService: fetched mountain id=${pid}`);
     // return of(MOUNTAINS.find(mt => mt.pid === pid));
     const url = `${this.apiWeather}/${pid}`;
-    console.log(456);
-    console.log(url);
-    console.log(456);
+    // console.log(456);
+    // console.log(url);
+    // console.log(456);
     return this.http.get<Weather>(url).pipe(
       tap(_ => this.log(`fetched mountain pid=${pid}`)),
+      // tap(data => {
+      //   console.log(`${data}`);
+      //   console.log('@@@@');
+      // }),
       catchError(this.handleError<Weather>(`getMountain pid=${pid}`))
     );
   }
