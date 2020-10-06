@@ -1,7 +1,13 @@
 
 ```bash
+### Debug
 ng serve --proxy-config proxy.conf.json
+
+
+### Dependency
+ng add @angular/material
 ```
+
 
 # AngularMap
 

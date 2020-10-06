@@ -1,10 +1,6 @@
-export interface Weather {
-  pid: string;
-  data: Data;
-}
 
-export interface Data {
-  time_duration: string;
+export interface Weather {
+  time: string;
   temperature: number;
   body_temperature: number;
   humidity: number;
