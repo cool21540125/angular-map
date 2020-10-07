@@ -11,7 +11,7 @@ import { MountainService } from '../mountain.service';
 })
 export class MountainDetailComponent implements OnInit {
 
-  weather: Array<Weather> = [];
+  weather: Weather[];
 
   constructor(
     private route: ActivatedRoute,
@@ -29,11 +29,7 @@ export class MountainDetailComponent implements OnInit {
     const pid = this.route.snapshot.paramMap.get('pid');
     this.mountainService.getWeather(pid).subscribe(
       result => {
-        console.log(typeof(result));
-        console.log(result);
-        result.forEach((elem, idx, arr) => {
-          this.weather.push(elem);
-        });
+        this.weather = result;
       });
   }
 

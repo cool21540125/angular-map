@@ -26,13 +26,14 @@ export class MountainService {
       );
   }
 
-  getWeather(pid: string): Observable<Weather> {
+  getWeather(pid: string): Observable<Weather[]> {
     // this.messageService.add(`MountainService: fetched mountain id=${pid}`);
     const url = `${this.apiWeather}/${pid}`;
 
-    return this.http.get<Weather>(url).pipe(
-      tap(_ => this.log(`fetched mountain pid=${pid}`)),
-      catchError(this.handleError<Weather>(`getMountain pid=${pid}`))
+    return this.http.get<Weather[]>(url)
+      .pipe(
+        tap(_ => this.log(`fetched mountain pid=${pid}`)),
+        catchError(this.handleError<Weather[]>(`getMountain pid=${pid}`))
     );
   }
 

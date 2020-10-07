@@ -7,7 +7,6 @@
   <div class="list">
     <ul class="mountains">
       <li *ngFor="let item of weather">
-        {{item.time}}:
         溫度: {{item.temperature}} / 體感: {{item.body_temperature}} /
         濕: {{item.humidity}} / 降雨%: {{item.chance_of_rain}}
       </li>
