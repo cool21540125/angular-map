@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MountainComponent } from './mountain/mountain.component';
-import { AreaComponent } from './area/area.component';
 import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -16,7 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     MountainComponent,
-    AreaComponent,
     MountainDetailComponent,
     MessagesComponent,
     DashboardComponent
