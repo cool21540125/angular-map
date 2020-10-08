@@ -11,6 +11,7 @@ import { MountainService } from '../mountain.service';
 })
 export class MountainDetailComponent implements OnInit {
 
+  displayedColumns: string[] = ['time', 'temperature', 'body_temperature', 'humidity', 'chance_of_rain'];
   weather: Weather[];
 
   constructor(

@@ -1,25 +1,46 @@
-
-
-
 <div *ngIf="weather">
 
   <h2>Details</h2>
-  <div class="list">
+  <!-- <div class="list">
     <ul class="mountains">
       <li *ngFor="let item of weather">
         溫度: {{item.temperature}} / 體感: {{item.body_temperature}} /
         濕: {{item.humidity}} / 降雨%: {{item.chance_of_rain}}
       </li>
     </ul>
-  </div>
+  </div> -->
 
-  OK
+  <table mat-table [dataSource]="weather">
+    <ng-container matColumnDef="time" class="mat-column-time">
+      <th mat-header-cell *matHeaderCellDef> 時間 </th>
+      <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="temperature">
+      <th mat-header-cell *matHeaderCellDef> 溫度 </th>
+      <td mat-cell *matCellDef="let element"> {{element.temperature}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="body_temperature">
+      <th mat-header-cell *matHeaderCellDef> 體感溫度 </th>
+      <td mat-cell *matCellDef="let element"> {{element.body_temperature}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="humidity">
+      <th mat-header-cell *matHeaderCellDef> 濕度% </th>
+      <td mat-cell *matCellDef="let element"> {{element.humidity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="chance_of_rain">
+      <th mat-header-cell *matHeaderCellDef> 降雨率% </th>
+      <td mat-cell *matCellDef="let element"> {{element.chance_of_rain}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+  <hr />
+  <button (click)="goBack()">Back</button>
 </div>
-
-<!-- <mat-table [dataSource]="weather">
-</mat-table> -->
-
-
-
-<hr />
-<button (click)="goBack()">Back</button>
