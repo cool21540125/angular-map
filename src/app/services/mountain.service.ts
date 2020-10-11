@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { catchError, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { Mountain } from './mountain';
-import { Weather } from './weather';
+import { Mountain } from '../models/mountain';
+import { Weather } from '../models/weather';
 import { MessageService } from './message.service';
 
 @Injectable({

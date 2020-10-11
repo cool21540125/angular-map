@@ -1,14 +1,6 @@
 <div *ngIf="weather">
 
   <h2>Details</h2>
-  <!-- <div class="list">
-    <ul class="mountains">
-      <li *ngFor="let item of weather">
-        溫度: {{item.temperature}} / 體感: {{item.body_temperature}} /
-        濕: {{item.humidity}} / 降雨%: {{item.chance_of_rain}}
-      </li>
-    </ul>
-  </div> -->
 
   <table mat-table [dataSource]="weather">
     <ng-container matColumnDef="time" class="mat-column-time">
@@ -42,5 +34,5 @@
 
 
   <hr />
-  <button (click)="goBack()">Back</button>
+  <a mat-raised-button color="accent" routerLink="/mountains">Back</a>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MountainService } from '../mountain.service';
-import { Mountain } from '../mountain';
+import { MountainService } from '../../services/mountain.service';
+import { Mountain } from '../../models/mountain';
 
 @Component({
   selector: 'app-mountain',

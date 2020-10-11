@@ -1,8 +1,8 @@
-import { Weather } from '../weather';
+import { Weather } from '../../models/weather';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
-import { MountainService } from '../mountain.service';
+import { MountainService } from '../../services/mountain.service';
 
 @Component({
   selector: 'app-mountain-detail',

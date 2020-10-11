@@ -1,17 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MountainComponent } from './mountain/mountain.component';
-import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
-import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MatTableModule } from '@angular/material/table';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FrameComponent } from './frame/frame.component';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { MaterialModules } from './modules/material/material.module';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MountainComponent } from './components/mountain/mountain.component';
+import { MountainDetailComponent } from './components/mountain-detail/mountain-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+
 
 @NgModule({
   declarations: [
@@ -19,17 +19,16 @@ import { FrameComponent } from './frame/frame.component';
     MountainComponent,
     MountainDetailComponent,
     MessagesComponent,
-    DashboardComponent,
-    FrameComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatTableModule,
-    MatToolbarModule,
+    MaterialModules,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
