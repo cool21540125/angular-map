@@ -1,10 +1,25 @@
 {
   "files.exclude": {
+    ".vscode/": true,
+    ".gitignore": true,
     "node_modules/": true,
+
     "e2e/": true,
     "**/assets/": true,
     "**/environments/": true,
-    ".vscode/": true,
     "**/*.*.spec.ts": true,
+
+    "**/polyfills.ts": true,
+    "**/main.ts": true,
+    "**/test.ts": true,
+    "**/favicon.ico": true,
+
+    ".browserslistrc": true,
+    "karma.conf.js": true,
+    "tsconfig.app.json": true,
+    "tsconfig.json": true,
+    "tsconfig.spec.json": true,
+    "tslint.json": true,
+    ".editorconfig": true,
   },
 }

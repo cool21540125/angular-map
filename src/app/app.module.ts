@@ -8,8 +8,10 @@ import { MountainComponent } from './mountain/mountain.component';
 import { MountainDetailComponent } from './mountain-detail/mountain-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MatTableModule, MatTableDataSource } from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FrameComponent } from './frame/frame.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MountainComponent,
     MountainDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    FrameComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
