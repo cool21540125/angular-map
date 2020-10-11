@@ -12,7 +12,6 @@ import { MountainComponent } from './components/mountain/mountain.component';
 import { MountainDetailComponent } from './components/mountain-detail/mountain-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
