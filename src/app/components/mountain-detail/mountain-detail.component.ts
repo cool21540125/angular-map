@@ -1,8 +1,8 @@
-import { Weather } from '../../models/weather';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { MountainService } from '../../services/mountain.service';
+import { Weather } from '../../models/weather';
 
 @Component({
   selector: 'app-mountain-detail',
@@ -10,7 +10,7 @@ import { MountainService } from '../../services/mountain.service';
   styleUrls: ['./mountain-detail.component.scss']
 })
 export class MountainDetailComponent implements OnInit {
-
+  @Input('currentMountain') currentMountain: string;   // tslint:disable-line: no-input-rename
   displayedColumns: string[] = ['time', 'temperature', 'body_temperature', 'humidity', 'chance_of_rain'];
   weather: Weather[];
 

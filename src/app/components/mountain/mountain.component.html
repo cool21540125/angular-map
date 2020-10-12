@@ -1,5 +1,6 @@
 <h2> 山岳天氣查詢 </h2>
 <ul class="mountains">
+  <!-- TODO: 帶入父層的 mountain name -->
   <li *ngFor="let mt of mountains">
     <a routerLink="/detail/{{mt.pid}}">
       <span class="badge">{{mt.pid}}</span> {{mt.name}}
