@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-// import { RandomDogService } from '../../../services/random-dog.service';
+import { RandomDogService } from '../../../services/random-dog.service';
 
 @Component({
   selector: 'app-random-dog',
@@ -13,7 +13,8 @@ export class RandomDogComponent implements OnInit {
   imgUrl = '';
 
   constructor(
-    private httpClient: HttpClient
+    // private httpClient: HttpClient
+    private randomDogService: RandomDogService
   ) { }
 
   ngOnInit(): void {
@@ -21,11 +22,9 @@ export class RandomDogComponent implements OnInit {
   }
 
   load_image() {
-    this.httpClient.get('/api/breeds/image/random').subscribe(
-      (result: any) => {
-        console.log(result.message);
+    this.randomDogService.load_image().subscribe(
+      result => {
         this.imgUrl = result.message;
-        this.title = `${this.imgUrl}`;
       }
     );
   }
