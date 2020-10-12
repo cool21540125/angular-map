@@ -14,6 +14,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { MrtComponent } from './components/examples/mrt/mrt.component';
 import { UdfpowerComponent } from './components/examples/udfpower/udfpower.component';
 import { ExponentialPipe } from './pipes/exponential.pipe';
+import { RandomDogComponent } from './components/examples/random-dog/random-dog.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ExponentialPipe } from './pipes/exponential.pipe';
     MrtComponent,
     UdfpowerComponent,
     ExponentialPipe,
+    RandomDogComponent,
   ],
   imports: [
     BrowserModule,
