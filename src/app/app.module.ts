@@ -14,6 +14,10 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { MrtComponent } from './components/examples/mrt/mrt.component';
 import { UdfpowerComponent } from './components/examples/udfpower/udfpower.component';
 import { ExponentialPipe } from './pipes/exponential.pipe';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { UnlessDirective } from './directives/unless.directive';
+import { HighlightDirective } from './directives/highlight.directive';
+import { MyMessageBoardComponent } from './components/examples/my-message-board/my-message-board.component';
 import { RandomDogComponent } from './components/examples/random-dog/random-dog.component';
 
 @NgModule({
@@ -27,6 +31,10 @@ import { RandomDogComponent } from './components/examples/random-dog/random-dog.
     MrtComponent,
     UdfpowerComponent,
     ExponentialPipe,
+    UnlessDirective,
+    HighlightDirective,
+    MyMessageBoardComponent,
+    ReversePipe,
     RandomDogComponent,
   ],
   imports: [

@@ -1,0 +1,30 @@
+<form>
+  <p>
+    名稱：<input type="text" name="name" [(ngModel)]="name">
+  </p>
+
+  <p>
+    內容：<input type="text" name="content" [(ngModel)]="content">
+    <!-- form elements 如果使用了 雙向綁定, 必須要有 name attribute -->
+  </p>
+
+  <p>
+    <button type="submit" (click)="addMessage()">新增留言</button>
+  </p>
+</form>
+
+<!-- <ng-container *ngFor="let message of messages?.reverse()"> -->
+<ng-container *ngFor="let message of messages | reverse">
+  <p>
+    留言人： {{ message.name }}
+  </p>
+
+  <p>
+    訊息內容：{{ message.content }}
+  </p>
+
+  <p>
+    時間： {{ message.date }}
+  </p>
+</ng-container>
+
