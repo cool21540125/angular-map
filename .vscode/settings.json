@@ -7,7 +7,7 @@
     "e2e/": true,
     "**/assets/": true,
     "**/environments/": true,
-    "**/*.*.spec.ts": true,
+    "**/*.spec.ts": true,
 
     "**/polyfills.ts": true,
     "**/main.ts": true,
