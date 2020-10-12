@@ -11,4 +11,4 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   ],
   providers: [],
 })
-export class MaterialModules { }
+export class MaterialModule { }

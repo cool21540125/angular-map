@@ -11,6 +11,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MountainComponent } from './components/mountain/mountain.component';
 import { MountainDetailComponent } from './components/mountain-detail/mountain-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { MrtComponent } from './components/examples/mrt/mrt.component';
+import { UdfpowerComponent } from './components/examples/udfpower/udfpower.component';
+import { ExponentialPipe } from './pipes/exponential.pipe';
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import { MessagesComponent } from './messages/messages.component';
     MessagesComponent,
     HeaderComponent,
     FooterComponent,
+    MrtComponent,
+    UdfpowerComponent,
+    ExponentialPipe,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaterialModules,
+    MaterialModule,
     AppRoutingModule,
   ],
   providers: [],
