@@ -2,10 +2,8 @@
   "name": "angular-map",
   "version": "0.0.0",
   "scripts": {
-    "dev": "ng serve --proxy-config proxy.conf.json",
-    "prod": "ng build --prod --output-path dist",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
