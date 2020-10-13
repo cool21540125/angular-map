@@ -12,7 +12,7 @@
     "**/polyfills.ts": true,
     "**/main.ts": true,
     "**/test.ts": true,
-    "**/favicon.ico": true,
+    // "**/favicon.ico": true,
 
     ".browserslistrc": true,
     "karma.conf.js": true,
