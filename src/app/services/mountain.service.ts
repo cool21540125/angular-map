@@ -5,13 +5,12 @@ import { Observable, of } from 'rxjs';
 import { Mountain } from '../models/mountain';
 import { Weather } from '../models/weather';
 import { MessageService } from './message.service';
+import { environment } from '../../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MountainService {
-
-  private apiWeather = '/api/weather/mountain';  // URL to web api
 
   constructor(
     private http: HttpClient,
@@ -19,7 +18,7 @@ export class MountainService {
 
   getMountains(): Observable<Mountain[]> {
     // this.messageService.add('MountainService: fetched mountains');
-    return this.http.get<Mountain[]>(this.apiWeather)
+    return this.http.get<Mountain[]>(environment.backendApi)
       .pipe(
         tap(_ => this.log('fetched mountains')),
         catchError(this.handleError<Mountain[]>('getMountains', []))
@@ -28,7 +27,7 @@ export class MountainService {
 
   getWeather(pid: string): Observable<Weather[]> {
     // this.messageService.add(`MountainService: fetched mountain id=${pid}`);
-    const url = `${this.apiWeather}/${pid}`;
+    const url = `${environment.backendApi}/${pid}`;
 
     return this.http.get<Weather[]>(url)
       .pipe(
