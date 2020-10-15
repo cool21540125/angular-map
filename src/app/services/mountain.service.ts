@@ -12,13 +12,15 @@ import { environment } from '../../environments/environment.prod';
 })
 export class MountainService {
 
+  private apiWeather = '/api/weather/mountain';
+
   constructor(
     private http: HttpClient,
     private messageService: MessageService) { }
 
   getMountains(): Observable<Mountain[]> {
     // this.messageService.add('MountainService: fetched mountains');
-    return this.http.get<Mountain[]>(environment.backendApi)
+    return this.http.get<Mountain[]>(`${environment.backendApi}${this.apiWeather}`)
       .pipe(
         tap(_ => this.log('fetched mountains')),
         catchError(this.handleError<Mountain[]>('getMountains', []))
@@ -28,6 +30,7 @@ export class MountainService {
   getWeather(pid: string): Observable<Weather[]> {
     // this.messageService.add(`MountainService: fetched mountain id=${pid}`);
     const url = `${environment.backendApi}/${pid}`;
+    console.log(`@@@@ ${url} @@@@`);
 
     return this.http.get<Weather[]>(url)
       .pipe(

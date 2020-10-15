@@ -20,7 +20,6 @@ export class MyMessageBoardComponent implements OnInit {
     if (!this.name.trim() || !this.content.trim()) {
       return;
     }
-    console.log(22);
     const message = new Message(this.name, this.content);
     this.messages.push(message);
     // this.messages = [message, ...this.messages];
