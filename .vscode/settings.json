@@ -1,12 +1,12 @@
 {
   "files.exclude": {
-    ".vscode/": true,
-    ".gitignore": true,
+    // ".vscode/": true,
     "node_modules/": true,
+    // ".gitignore": true,
 
     "e2e/": true,
     "**/assets/": true,
-    "**/environments/": true,
+    // "**/environments/": true,
     "**/*.spec.ts": true,
 
     "**/polyfills.ts": true,
@@ -21,5 +21,7 @@
     "tsconfig.spec.json": true,
     "tslint.json": true,
     ".editorconfig": true,
+
+    // "dist": true
   },
 }
