@@ -12,6 +12,12 @@ build:
 deploy:
 	./deploy-manual.sh
 
+local1:
+	ng build --watch
+
+local2:
+	npm run dev --baseDir="dist"
+
 cd: clear build deploy
 
 .PHONY: clear dev build deploy cd
