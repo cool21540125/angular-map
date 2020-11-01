@@ -12,7 +12,8 @@ import { environment } from '../../environments/environment.prod';
 })
 export class MountainService {
 
-  private apiWeather = '/api/weather/mountain';
+  private apiMountains = '/api/weather/mountains';
+  private apiWeatherMountain = '/api/weather/mountain';
 
   constructor(
     private http: HttpClient,
@@ -20,17 +21,15 @@ export class MountainService {
 
   getMountains(): Observable<Mountain[]> {
     // this.messageService.add('MountainService: fetched mountains');
-    return this.http.get<Mountain[]>(`${environment.backendApi}${this.apiWeather}`)
+    console.log(`@@@@ Fetch mountains ${this.apiMountains} @@@@`);
+    return this.http.get<Mountain[]>(this.apiMountains)
       .pipe(
-        tap(_ => this.log('fetched mountains')),
         catchError(this.handleError<Mountain[]>('getMountains', []))
       );
   }
 
   getWeather(pid: string): Observable<Weather[]> {
-    // this.messageService.add(`MountainService: fetched mountain id=${pid}`);
-    const url = `${environment.backendApi}/${pid}`;
-    console.log(`@@@@ ${url} @@@@`);
+    const url = `${environment.backendApi}${this.apiWeatherMountain}/${pid}`;
 
     return this.http.get<Weather[]>(url)
       .pipe(

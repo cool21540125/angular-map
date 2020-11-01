@@ -1,5 +1,30 @@
 // FIXME: 好像有問題, 不會即時更動
 mat-table {
   width: 100%;
-  table-layout: fixed;
+  // table-layout: fixed;
+  // table-layout: auto;
+}
+
+// mat-header-cell {
+//   max-width: 100px;
+// }
+
+th.mat-header-cell {
+  padding-left: 12px;
+  padding-right: 12px;
+  // font-size: 12px;
+  // height: 30px;
+}
+
+
+tr.mat-header-row,
+th.mat-header-cell {
+  text-align: center;
+  height: 24px;
+}
+
+tr.mat-row,
+tr.mat-footer-row {
+  height: 28px;
+  text-align: center;
 }

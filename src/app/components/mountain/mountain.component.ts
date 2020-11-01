@@ -18,6 +18,7 @@ export class MountainComponent implements OnInit {
   }
 
   getMountains(): void {
+    console.log(12344);
     this.mtService.getMountains()
         .subscribe(mountains => {
           this.mountains = mountains;

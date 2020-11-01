@@ -3,7 +3,8 @@ clear:
 	rm -f dist.tar.gz
 
 dev:
-	ng serve --proxy-config proxy.conf.json
+	# ng serve --proxy-config src/proxy.conf.js
+	ng serve
 
 build:
 	ng build --prod
@@ -12,13 +13,7 @@ build:
 deploy:
 	./deploy-manual.sh
 
-local1:
-	ng build --watch
-
-local2:
-	npm run dev --baseDir="dist"
-
-cd: clear build deploy
+cd: clear build
 
 .PHONY: clear dev build deploy cd
 

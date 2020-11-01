@@ -9,14 +9,12 @@ import { environment } from '../../environments/environment.prod';
 })
 export class RandomDogService {
 
-  dog = '';
   constructor(
     private httpClient: HttpClient
-  ) {
-    console.log(`${environment.dogApi}.....`);
-  }
+  ) {}
 
   load_image(): Observable<any> {
+    console.log(`@@@@ ${environment.dogApi} @@@@`);
     return this.httpClient.get(environment.dogApi);
   }
 }
